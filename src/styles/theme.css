@@ -1,0 +1,60 @@
+:root {
+  color-scheme: light;
+  --bg: #FFFFFF;
+  --surface: #F7F8F9;
+  --text: #0D1117;
+  --muted: #5B6470;
+  --brand: #0EA5A7;
+  --brand-600: #0B8688;
+  --accent: #F59E0B;
+  --border: #E3E6EA;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --link: var(--brand);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: #0B0F12;
+  --surface: #12171B;
+  --text: #E6EAF0;
+  --muted: #9AA3AE;
+  --brand: #5AD1D2;
+  --brand-600: #3FB7B8;
+  --accent: #F8B84D;
+  --border: #22303B;
+  --success: #34D399;
+  --warning: #F8B84D;
+  --danger: #F87171;
+  --link: var(--brand);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--brand-600); text-decoration: underline; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+}
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border-radius: 10px; padding: .6rem .9rem; font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-primary { background: var(--brand); color: #fff; }
+.btn-primary:hover { background: var(--brand-600); }
+
+.btn-outline { background: transparent; color: var(--brand); border-color: var(--brand); }
+.btn-outline:hover { background: color-mix(in srgb, var(--brand) 12%, transparent); }
+
+.tag { background: color-mix(in srgb, var(--accent) 15%, transparent); color: #7A4B00; padding: .2rem .5rem; border-radius: .4rem; }
